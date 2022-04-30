@@ -1,10 +1,10 @@
 <?php
 
-require 'includes/init.php';
+require '../includes/init.php';
 
 Auth::requireLogin();
 
-$conn = require 'includes/db.php';
+$conn = require '../includes/db.php';
 
 $paginator = new Paginator($_GET['page'] ?? 1, 10, Article::getTotal($conn));
 
@@ -12,7 +12,7 @@ $articles = Article::getPage($conn, $paginator->limit, $paginator->offset);
 
 ?>
 
-<?php require 'includes/header.php'; ?>
+<?php require '../includes/header.php'; ?>
 
 <h4 class="h4 text-center p-2">Administrator Area</h4>
 
@@ -41,7 +41,7 @@ $articles = Article::getPage($conn, $paginator->limit, $paginator->offset);
                 <?php endforeach; ?>
             </thead>
         </table>
-        <?php require 'includes/paginator.php'; ?>
+        <?php require '../includes/paginator.php'; ?>
 </div>
 <?php endif; ?>
-<?php require 'includes/footer.php'; ?>
+<?php require '../includes/footer.php'; ?>

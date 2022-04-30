@@ -1,6 +1,6 @@
 <?php
-require 'includes/init.php';
-$conn = require 'includes/db.php';
+require '../includes/init.php';
+$conn = require '../includes/db.php';
 
 
 if (isset($_GET['id'])) {
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-<?php require 'includes/header.php'; ?>
+<?php require '../includes/header.php'; ?>
 
 <form method="post">
     <div class="modal-content">
@@ -48,4 +48,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php require 'includes/article-form.php'; ?>
 
-<?php require 'includes/footer.php'; ?>
+<?php require '../includes/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
-require 'includes/init.php';
-$conn = require 'includes/db.php';
+require '../includes/init.php';
+$conn = require '../includes/db.php';
 
 
 if (isset($_GET['id'])) {
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-<?php require 'includes/header.php'; ?>
+<?php require '../includes/header.php'; ?>
 
 <form enctype="multipart/form-data" method="post">
     <div>
@@ -98,4 +98,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </form>
 
-<?php require 'includes/footer.php'; ?>
+<?php require '../includes/footer.php'; ?>

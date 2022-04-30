@@ -1,8 +1,8 @@
 <?php
-require 'includes/init.php';
+require '../includes/init.php';
 
 
-$conn = require 'includes/db.php';
+$conn = require '../includes/db.php';
 
 
 if (isset($_GET['id'])) {
@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $article = null;
 }
 ?>
-<?php require 'includes/header.php'; ?>
+<?php require '../includes/header.php'; ?>
 
 
 <a class="btn btn-secondary my-4" href="new-article.php">New article</a>
@@ -66,4 +66,4 @@ if (isset($_GET['id'])) {
     <p>Article Not Found</p>
 <?php endif; ?>
 
-<?php require 'includes/footer.php'; ?>
+<?php require '../includes/footer.php'; ?>

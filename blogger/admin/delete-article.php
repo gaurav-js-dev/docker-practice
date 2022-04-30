@@ -1,8 +1,9 @@
 <?php
 
-require 'includes/init.php';
+require '../includes/init.php';
 
-$conn = require 'includes/db.php';
+
+$conn = require '../includes/db.php';
 
 
 if (isset($_GET['id'])) {
