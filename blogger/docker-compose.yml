@@ -13,7 +13,9 @@ services:
       - 8000:80
   dbms:
     container_name: dbms
-    image: mysql
+    stdin_open: true
+    tty: true
+    build: ./dump
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
