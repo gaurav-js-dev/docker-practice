@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 require '../includes/init.php';
 $conn = require '../includes/db.php';
 

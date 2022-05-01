@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 class Auth
 {
@@ -12,7 +13,7 @@ class Auth
     public static function requireLogin()
     {
         if (!static::isLoggedIn()) {
-            header("Location: /projects/blogger");
+            die("unauthorised");
         }
     }
 

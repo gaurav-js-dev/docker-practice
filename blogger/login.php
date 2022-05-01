@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 require 'includes/init.php';
 
 if (Auth::isLoggedIn()) {
