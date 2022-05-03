@@ -24,13 +24,25 @@ To run this project locally please clone this repo on your machine then from blo
     docker-compose up --build -d
     ```
 
-````
-2. After docker is successfully build to use the application navigate to  ```javascript
-http://localhost:8000/
-````
+2.  ```javascript
+    After docker build to use the application navigate to http://localhost:8000/
+    ```
 
 In order to use contact form to send emails from contact page please enable SMTP settings on your email accounts and fill below details inside **config.php** file with your email, password & host.
 
-define('SMTP_HOST', 'mail.example.com');  
-define('SMTP_USER', 'user@example.com');  
-define('SMTP_PASS', 'secret pass');
+```javascript
+define("SMTP_HOST", "mail.example.com");
+define("SMTP_USER", "user@example.com");
+define("SMTP_PASS", "secret pass");
+```
+
+### Admin User
+
+USERNAME: dave
+PASSWORD: secret
+
+- http://localhost:8000/admin can be open to access admin page. If Admin user is not logging in with above credentials. Please run below code from mysql docker context or add an admin under user table in database with below username and password hash.
+
+```javascript
+INSERT INTO `user` (`id`, `username`, `password`) VALUES (NULL, 'dave', '$2a$04$qQyzO8o8G0z3EcezEjeaIennno0Xl4A2yw5fqerWloy0V8eipVHjm');
+```
