@@ -21,12 +21,14 @@ password : **secret**
 
 ## Local usage instructions
 
-To run this project locally please clone this repo on your machine then add your own Database configuration details in **config.php** in root folder. Please create a MY SQL database of same name you have mentioned as DB name in config file.
+This application is container dockerized. Before using it please ensure docker desktop software is installed on your local machine.  
+To run this project locally please clone this repo on your machine then from blogger directory run below command to build and start the container
 
-define('DB_HOST', **'your DB host'**);  
-define('DB_NAME', **'database name'**);  
-define('DB_USER', **'your DB username'**);  
-define('DB_PASS', **'your DB password'**);
+```javascript
+docker-compose up --build -d
+```
+
+In order to use contact form to send emails from contact page please enable SMTP settings on your email accounts and fill below details inside **config.php** file with your email, password & host.
 
 define('SMTP_HOST', 'mail.example.com');  
 define('SMTP_USER', 'user@example.com');  
