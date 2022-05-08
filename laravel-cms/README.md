@@ -36,6 +36,8 @@ $ yarn install
 $ composer install --ignore-platform-reqs
 ```
 
+Open http://localhost/ to access working application. For phpmyadmin go to http://localhost:8888
+
 ### Migrations :
 
 You need to run the migrations with the seeds after your container is up. Run below command to open docker context cli then run migration command:
