@@ -61,3 +61,17 @@ To access the admin area use following credentials
                 email => userjoe@gmail.com
                 password => Laravelproject@1234
 ```
+
+### Troubleshooting guide
+
+Upon receiving any permission related errors in the browser or while migration referring to file laravel.log doesn't have permission.
+
+Please run the below command this is a known issue for first time setup with some versions & dependencies.
+
+```
+$ sudo chown -R $USER:www-data storage
+
+//If issue is not fixed from above command then run below
+
+$ sudo chmod -R 775 storage bootstrap/cache
+```
